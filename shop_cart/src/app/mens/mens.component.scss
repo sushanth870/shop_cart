@@ -1,0 +1,12 @@
+.mens_margin{
+    margin:10px;
+    .heading{
+        border-left: 10px solid rgb(251, 251, 14);
+        padding-left:10px
+    }
+    .products_section{
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+}
