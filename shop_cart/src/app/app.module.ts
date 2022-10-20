@@ -11,14 +11,17 @@ import { ElectronicsComponent } from './electronics/electronics.component';
 import { MensComponent } from './mens/mens.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoute: Routes = [
-  {path: '', redirectTo: 'home', pathMatch:'full'},
+  // {path: '', redirectTo: 'home', pathMatch:'full'},
   {path:'mens',component:MensComponent},
   {path:'electronics',component:ElectronicsComponent},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
-  {path:'productDetail',component:ProductDetailsComponent}
+  {path:'productDetail',component:ProductDetailsComponent},
+  {path:'**',component:LoginComponent},
+
 ]
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ const appRoute: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    FormsModule
 
   ],
   providers: [],

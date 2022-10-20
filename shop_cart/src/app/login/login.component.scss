@@ -14,4 +14,15 @@
          margin-top:20px;
          margin-bottom:20px;
      }
+     .btn-container{
+        position: relative;
+        .error{
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            font-size: small;
+            color:red;
+            
+        }
+     }
  }
