@@ -13,8 +13,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 
+import {HttpClientModule} from '@angular/common/http';
+import { freeApiService } from './services/freeapi.service';
+
 const appRoute: Routes = [
-  // {path: '', redirectTo: 'home', pathMatch:'full'},
+  {path: '', redirectTo: 'Login', pathMatch:'full'},
   {path:'mens',component:MensComponent},
   {path:'electronics',component:ElectronicsComponent},
   {path:'login',component:LoginComponent},
@@ -38,10 +41,10 @@ const appRoute: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoute),
-    FormsModule
-
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [freeApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

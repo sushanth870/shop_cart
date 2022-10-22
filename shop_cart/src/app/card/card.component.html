@@ -2,18 +2,16 @@
     <div class="row">
       <div class="col-md-12">
         <div 
-          class="card"
-          style="    cursor: pointer; width: 10rem;margin: 20px;display: flex;justify-content:center;flex-direction:column; border: 1px solid rgb(164, 161, 161); border-radius: 8px;
-          " 
+          class="card card_sty"
           >
          <div class="image_part">
            <div class="adj_img">
-            <img class="img-responsive" src={{details.image_path}} alt="image">
+            <img class="img-responsive imageWidthHeight" src={{details.image}} alt="image">
            </div>
          </div>
          <div class="text_part">
-            <p class="prod_name">{{details.prod_name}}</p>
-            <p class="prod_price">${{details.prod_price}}</p>
+            <p class="prod_name">{{details.title}}</p>
+            <p class="prod_price">${{details.price}}</p>
           </div>
         </div>
       </div>

@@ -1,25 +1,25 @@
 <nav class="navbar navbar-expand-lg"  style="background-color:rgb(251, 251, 14);">
     <div class="container-fluid" style="margin-left: 10px;margin-right: 10px;">
-      <a class="navbar-brand" routerLink="/home">HopShop</a>
+      <a class="navbar-brand"  (click)="goToHome()">ShopCart</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+            <a class="nav-link active cursorPtr" aria-current="page" (click)="goToHome()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/mens">Men's Clothing</a>
+            <a class="nav-link cursorPtr" (click)="goToMens()">Men's Clothing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="#">Women's Clothing</a>
+            <a class="nav-link cursorPtr" routerLink="#">Women's Clothing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link "  routerLink="electronics">Electronics</a>
+            <a class="nav-link cursorPtr "  (click)="goToElectronics()">Electronics</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link "  routerLink="#">Jewellery</a>
+            <a class="nav-link cursorPtr "  routerLink="#">Jewellery</a>
           </li>
         </ul>
       </div>
@@ -37,7 +37,7 @@
               </svg></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/login">Login</a>
+                <a class="nav-link active cursorPtr" aria-current="page" (click)="logout()">Logout</a>
               </li>
           </ul>
       </div>
