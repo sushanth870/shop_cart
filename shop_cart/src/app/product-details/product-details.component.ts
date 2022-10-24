@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { freeApiService } from '../services/freeapi.service';
 
 @Component({
   selector: 'app-product-details',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  constructor() { }
+
+   productDetails:any;
+   productId: any;
+
+  constructor(private _freeApiService: freeApiService,private activatedRoute: ActivatedRoute) { }
+
 
   ngOnInit(): void {
+
+    this.productId = this.activatedRoute.snapshot.paramMap.get('id');
+    this._freeApiService.getProductDetails(this.productId).subscribe((productdetails) => {
+      this.productDetails = productdetails;
+    });
   }
 
 }

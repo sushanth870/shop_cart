@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
 import { freeApiService } from './services/freeapi.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'Login', pathMatch:'full'},
@@ -22,8 +23,8 @@ const appRoute: Routes = [
   {path:'electronics',component:ElectronicsComponent},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
-  {path:'productDetail',component:ProductDetailsComponent},
-  {path:'**',component:LoginComponent},
+  {path:'productDetails/:id',component:ProductDetailsComponent},
+  {path:'**',component:PageNotFoundComponent},
 
 ]
 @NgModule({
@@ -35,7 +36,8 @@ const appRoute: Routes = [
     ElectronicsComponent,
     MensComponent,
     ProductDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

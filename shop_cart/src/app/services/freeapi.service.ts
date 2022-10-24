@@ -1,13 +1,16 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
+import {map} from 'rxjs/operators';
 @Injectable()
 export class freeApiService{
 
     constructor(private httpClient: HttpClient){}
 
     getproducts(): Observable<any> {
-        return this.httpClient.get("https://fakestoreapi.com/products")
+        return this.httpClient.get("https://fakestoreapi.com/products").pipe(map((res:any)=>{
+            return res;
+        }))
     }
 
     getAllMensProducts(): Observable<any> {
@@ -17,4 +20,9 @@ export class freeApiService{
     getAllElectronicsProducts(): Observable<any> {
         return this.httpClient.get("https://fakestoreapi.com/products/category/electronics")
     }
+
+    getProductDetails(id:number): Observable<any> {
+        
+        return this.httpClient.get("https://fakestoreapi.com/products/"+id);
+    } 
 }
