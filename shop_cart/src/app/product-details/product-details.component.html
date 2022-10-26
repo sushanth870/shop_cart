@@ -16,7 +16,7 @@
         <p>
           {{ productDetails.title }}
         </p>
-        <span>${{ productDetails.price }}</span>
+        <span>{{ productDetails.price  | currency: 'INR' : 'symbol' }}</span>
       </div>
       <div class="categoryname">
         {{ productDetails.category }}
@@ -25,7 +25,7 @@
         {{ productDetails.description }}
       </p>
       <div class="button_parent">
-        <button class="cart_button">Add to cart</button>
+        <button class="cart_button" (click)="addtocart(productDetails)">Add to cart</button>
       </div>
     </div>
   </div>

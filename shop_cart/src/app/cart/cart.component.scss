@@ -1,0 +1,29 @@
+.box {
+    padding:20px;
+    margin-top: 20px;
+  .empty_cart_image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .inside_cart_image {
+        height: 270px;
+        width: 300px;
+    }
+  }
+  .text_area_box{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    .shop_btn{
+        background: rgb(230, 230, 230);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        width: 150px;
+        padding: 10px;
+    }
+  }
+
+}

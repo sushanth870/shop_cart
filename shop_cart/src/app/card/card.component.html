@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-md-12">
         <div 
-          class="card card_sty shadow"
+          class="card card_sty "
           routerLink="/productDetails/{{details.id}}"
           >
          <div class="image_part">
@@ -12,7 +12,7 @@
          </div>
          <div class="text_part">
             <p class="prod_name">{{details.title}}</p>
-            <p class="prod_price">${{details.price}}</p>
+            <p class="prod_price">{{details.price | currency: 'INR' : 'symbol'}}</p>
           </div>
         </div>
       </div>

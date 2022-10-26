@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { CartService } from '../services/cart.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,9 +9,15 @@ import { AuthService } from '../services/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router, private auth: AuthService) { }
+  constructor(private router: Router, private auth: AuthService,private _cartService: CartService) { }
+
+  public totalItems:number=0;
 
   ngOnInit(): void {
+    this._cartService.getProducts().subscribe(res=>{
+      this.totalItems=res.length;
+    })
+
   }
 
   goToHome(){
@@ -22,8 +29,11 @@ export class NavbarComponent implements OnInit {
   goToElectronics(){
     this.router.navigate(['electronics'])
   }
+  goToCart(){
+    this.router.navigate(['cart'])
+  }
   logout(){
-    console.log('inside lg1');
     this.auth.logout();
   }
+
 }
