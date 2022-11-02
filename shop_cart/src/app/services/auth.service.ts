@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private router: Router) { }
 
   login(uname: string, pword: string) {
-    if(uname === 'group1'&& pword==='1234')
+    if(uname === 'Angular'&& pword==='1234')
     {
       return 200;
     }

@@ -20,10 +20,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
-  {path:'mens',component:MensComponent},
-  {path:'electronics',component:ElectronicsComponent},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
+  {path:'mens',component:MensComponent},
+  {path:'electronics',component:ElectronicsComponent},
   {path:'productDetails/:id',component:ProductDetailsComponent},
   {path:'cart',component:CartComponent},
   {path:'**',component:PageNotFoundComponent},

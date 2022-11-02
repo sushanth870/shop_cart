@@ -19,7 +19,7 @@
         <span>{{ productDetails.price  | currency: 'INR' : 'symbol' }}</span>
       </div>
       <div class="categoryname">
-        {{ productDetails.category }}
+        {{ productDetails.category | uppercase }}
       </div>
       <p class="prod_description">
         {{ productDetails.description }}

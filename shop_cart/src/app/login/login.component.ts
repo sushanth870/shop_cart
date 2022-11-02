@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
   
   login(){
     if(this.username.trim().length===0){
-      console.log(this.username.trim().length)
       this.errorMsg="usernames required";
     }else if(this.password.trim().length===0){
       this.errorMsg="password required"

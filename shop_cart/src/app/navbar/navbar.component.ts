@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
     this._cartService.getProducts().subscribe(res=>{
       this.totalItems=res.length;
     })
-
   }
 
   goToHome(){
