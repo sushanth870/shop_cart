@@ -27,8 +27,6 @@ const appRoute: Routes = [
   {path:'productDetails/:id',component:ProductDetailsComponent},
   {path:'cart',component:CartComponent},
   {path:'**',component:PageNotFoundComponent},
-
-
 ]
 @NgModule({
   declarations: [

@@ -1,19 +1,23 @@
-<div class="container " >
-    <div class="row">
-      <div class="col-md-12">
-        <div 
-          class="card card_sty "
-          routerLink="/productDetails/{{details.id}}"
-          >
-         <div class="image_part">
-           <div class="adj_img">
-            <img class="img-responsive imageWidthHeight" src={{details.image}} alt="image">
-           </div>
-         </div>
-         <div class="text_part">
-            <p class="prod_name">{{details.title}}</p>
-            <p class="prod_price">{{details.price | currency: 'INR' : 'symbol'}}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card_sty" routerLink="/productDetails/{{ details.id }}">
+        <div class="image_part">
+          <div class="adj_img">
+            <img
+              class="img-responsive imageWidthHeight"
+              src="{{ details.image }}"
+              alt="image"
+            />
           </div>
         </div>
+        <div class="text_part">
+          <p class="prod_name">{{ details.title }}</p>
+          <p class="prod_price">
+            {{ details.price | currency : "INR" : "symbol" }}
+          </p>
+        </div>
       </div>
+    </div>
   </div>
+</div>
