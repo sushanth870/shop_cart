@@ -1,12 +1,27 @@
-.mens_margin{
-    margin:10px;
-    .heading{
-        border-left: 10px solid #fdc827;
-        padding-left:10px
+.marginLR40{
+    margin-left:  40px;
+    margin-right: 40px;
+    .mens_margin{
+        margin:10px;
+        .card_margin{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .heading{
+            border-left: 10px solid #fdc827;
+            padding-left:10px;
+        }
+        .products_section{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+        }
     }
-    .products_section{
-        display:flex;
-        flex-direction:row;
-        flex-wrap: wrap;
-    }
+
+}
+
+@media screen and (max-width: 480px) {
+.heading{
+    font-size :10px;
+}
 }

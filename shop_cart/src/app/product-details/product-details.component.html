@@ -1,32 +1,40 @@
-<div class="outer_box">
-  <div class="detail_card">
-    <div class="img_area">
-      <div class="image_part">
-        <div class="adj_img">
-          <img
-            class="img-responsive imageWidthHeight"
-            src="{{ productDetails.image }}"
-            alt="image"
-          />
+<app-navbar></app-navbar>
+<div class="marginLR40">
+  <div class="outer_box">
+    <div class="detail_card">
+      <div class="img_area">
+        <div class="image_part">
+          <div class="adj_img">
+            <img
+              class="img-responsive imageWidthHeight"
+              src="{{ productDetails.image }}"
+              alt="image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text_area">
+        <div class="title_and_cost">
+          <p class="fnt_s">
+            {{ productDetails.title }}
+          </p >
+          <span class="fnt_s">{{ productDetails.price | currency : "INR" : "symbol" }}</span>
+        </div>
+        <div class="categoryname">
+          {{ productDetails.category | uppercase }}
+        </div>
+        <p class="prod_description">
+          {{ productDetails.description }}
+        </p>
+        <div class="button_parent">
+          <button class="cart_button" (click)="addtocart(productDetails)">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
-    <div class="text_area">
-      <div class="title_and_cost">
-        <p>
-          {{ productDetails.title }}
-        </p>
-        <span>{{ productDetails.price  | currency: 'INR' : 'symbol' }}</span>
-      </div>
-      <div class="categoryname">
-        {{ productDetails.category | uppercase }}
-      </div>
-      <p class="prod_description">
-        {{ productDetails.description }}
-      </p>
-      <div class="button_parent">
-        <button class="cart_button" (click)="addtocart(productDetails)">Add to cart</button>
-      </div>
-    </div>
   </div>
+</div>
+<div>
+  <app-footer></app-footer>
 </div>

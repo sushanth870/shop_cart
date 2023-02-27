@@ -5,3 +5,19 @@
 .cursorPtr{
     cursor: pointer;
 }
+.jtcb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.d-f{
+    align-items: center;
+    display: flex;
+}
+
+// div.sticky {
+//     position: -webkit-sticky;
+//     position: sticky;
+//     top: 0;
+   
+//   }

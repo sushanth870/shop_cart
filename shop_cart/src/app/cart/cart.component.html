@@ -1,61 +1,177 @@
-<ng-container *ngIf="products.length!=0">
-     <div class="container">
+<app-navbar></app-navbar>
+<div *ngIf="desktop">
+  <div class="marginLR40">
+    <ng-container *ngIf="products.length != 0">
+      <div class="container">
         <div class="cart-table">
-            <table class="table table-responsive">
-                <thead>
-                    <tr>
-                        <th>Sr.No</th>
-                        <th>Product Name</th>
-                        <th>Product Image</th>
-                        <th>Description</th>
-                        <!-- <th>Price</th>
-                        <th>Quantity</th> -->
-                        <th>Total</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of products; let i = index">
-                        <td>{{i+1}}</td>
-                        <td>{{item.title}}</td>
-                        <td>
-                          <img style="width:120px;" src="{{item.image}}" alt="img">
-                        </td>
-                        <td style="width:25%">{{item.description}}</td>
-                        <!-- <td>50,000</td>
-                        <td>1</td> -->
-                        <td style="width:12%">{{item.price}}</td>
-                        <td>
-                            <button (click)="removeItem(item)" class="btn btn-danger"  type="button">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                      <td colspan="1"></td>
-                      <td><button class="btn btn-danger" (click)="emptycart()">Empty Cart</button></td>
-                      <td><button class="btn btn-primary" (click)="goToHome()">Shop More</button></td>
-                      <td><button class="btn btn-success" >Checkout</button></td>
-                      <td><strong>Grand Total: {{grandTotal | currency: 'INR' : 'symbol'}}</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-     </div>
-</ng-container>
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Description</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of products; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ item.title }}</td>
+                <td>
+                  <img style="width: 120px" src="{{ item.image }}" alt="img" />
+                </td>
+                <td style="width: 25%">{{ item.description }}</td>
 
-<ng-container *ngIf="products.length==0">
-  <div class="container ">
-    <div class="card box">
-      <h5 class="card-title">My Cart</h5>
-      <div>
-        <div class="empty_cart_image">
-          <img class="inside_cart_image" src="/assets/images/empty-cart.webp" />
-        </div>
-        <div class="text_area_box">
-          <h4>Your cart is empty!</h4>
-          <h6>Add item to it now</h6>
-          <button class="shop_btn" type="button" routerLink="/home">Shop Now</button>
+                <td style="width: 12%">{{ item.price }}</td>
+                <td>
+                  <button
+                    (click)="removeItem(item)"
+                    class="btn btn-danger"
+                    type="button"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan--="1"></td>
+                <td>
+                  <button class="btn btn-danger" (click)="emptycart()">
+                    Empty Cart
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-primary" (click)="goToHome()">
+                    Shop More
+                  </button>
+                </td>
+                <td><button class="btn btn-success">Checkout</button></td>
+                <td>
+                  <strong
+                    >Grand Total:
+                    {{ grandTotal | currency : "INR" : "symbol" }}</strong
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
+    </ng-container>
+
+    <ng-container *ngIf="products.length == 0">
+      <div class="container">
+        <div class="card box">
+          <h5 class="card-title">My Cart</h5>
+          <div>
+            <div class="empty_cart_image">
+              <img
+                class="inside_cart_image"
+                src="/assets/images/empty-cart.webp"
+              />
+            </div>
+            <div class="text_area_box">
+              <h4>Your cart is empty!</h4>
+              <h6>Add item to it now</h6>
+              <button class="shop_btn" type="button" routerLink="/home">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
-</ng-container>
+</div>
+<div *ngIf="!desktop">
+    <ng-container *ngIf="products.length != 0">
+      <div class="container">
+        <div class="cart-table">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th class="fs9">Sr.No</th>
+                <th class="fs9">Product Name</th>
+                <th class="fs9">Product Image</th>
+
+                <th class="fs9">Total</th>
+                <th class="fs9">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of products; let i = index">
+                <td class="fs9">{{ i + 1 }}</td>
+                <td class="fs9">{{ item.title }}</td>
+                <td>
+                  <img style="width: 60px" src="{{ item.image }}" alt="img" />
+                </td>
+                <td style="width: 10%" class="fs9">{{ item.price }}</td>
+                <td>
+                  <button
+                    (click)="removeItem(item)"
+                    class="btn btn-sm fs6 btn-danger"
+                    type="button"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan--="1"></td>
+                <td>
+                  <button class="btn btn-sm fs6 btn-danger" (click)="emptycart()">
+                    Empty Cart
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-primary fs6" (click)="goToHome()">
+                    Shop More
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-success fs6">Checkout</button>
+                </td>
+                <td>
+                  <strong class="fs9"
+                    >Grand Total:
+                    {{ grandTotal | currency : "INR" : "symbol" }}</strong
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="products.length == 0">
+      <div class="container">
+        <div class="card box">
+          <h5 class="card-title">My Cart</h5>
+          <div>
+            <div class="empty_cart_image">
+              <img
+                class="inside_cart_image"
+                src="/assets/images/empty-cart.webp"
+              />
+            </div>
+            <div class="text_area_box">
+              <h4>Your cart is empty!</h4>
+              <h6>Add item to it now</h6>
+              <button class="shop_btn  fs6" type="button" routerLink="/home">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+</div>
+<div>
+  <div>
+    <app-footer></app-footer>
+  </div>
+</div>

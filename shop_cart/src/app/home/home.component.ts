@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Products } from '../services/classes/products';
+import { freeApiService } from '../services/freeapi.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  listProducts: Products[];
+  constructor(private _freeApiService: freeApiService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._freeApiService.getproducts().subscribe((products) => {
+      this.listProducts = products;
+    });
   }
-
 }

@@ -47,3 +47,50 @@ p {
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .card_sty{
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  }
+  cursor: pointer;
+  width: 8rem;
+  height: 13rem;
+  margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 1px #eadede solid;
+  border: 1px #eadede solid;
+  border-radius: 6px;
+  .image_part {
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    .adj_img {
+      width: 5rem;
+      margin-top: 21px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .imageWidthHeight {
+      width: 80px;
+      height: 100px;
+    }
+  }
+  .text_part {
+    text-align: center;
+    .prod_name {
+      font-size: 9px;
+      font-weight: 600 !important;
+      display: block;
+    }
+    .prod_price {
+      margin-bottom: 0px;
+      font-size: 10px;
+      font-weight: 600 !important;
+    }
+  }
+}
+}

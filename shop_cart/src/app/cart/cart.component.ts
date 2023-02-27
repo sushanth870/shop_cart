@@ -11,13 +11,22 @@ export class CartComponent implements OnInit {
 
   public products : any =[];
   public grandTotal : number = 0 ;
-
+  desktop:boolean = true;
   constructor(private router: Router,private _cartService: CartService) { }
 
   ngOnInit(): void {
 this._cartService.getProducts().subscribe(res=>{
   this.products = res;
   this.grandTotal= this._cartService.getTotalPrice();
+// if(window.screen.width>480){
+//   this.desktop=true;
+// }
+// else{
+//   this.desktop=false;
+// }
+
+window.onresize = () => this.desktop = window.screen.width > 480;
+
 // console.log(this.grandTotal)
 })
 

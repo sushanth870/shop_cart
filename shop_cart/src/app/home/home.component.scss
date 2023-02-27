@@ -1,0 +1,43 @@
+.marginLR40{
+    margin-left:  40px;
+    margin-right: 40px;
+    .cat_margin{
+        margin:10px;
+        .cat_heading{
+            border-left: 10px solid #fdc827;
+            padding-left:10px
+        }
+        .cat_products_section{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            .marginLR20{
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .marginLR40{
+        margin-left:  40px;
+        margin-right: 40px;
+        .cat_margin{
+            margin:10px;
+            .cat_heading{
+                border-left: 10px solid #fdc827;
+                padding-left:10px
+            }
+            .cat_products_section{
+                display:flex;
+                flex-direction:row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+}

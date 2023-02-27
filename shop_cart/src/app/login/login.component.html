@@ -1,31 +1,77 @@
-<div class="detail_card">
-  <div class="margin10">
-    <form>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input
-          type="email"
-          class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          name="username"
-          [(ngModel)]="username"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-          name="password"
-          [(ngModel)]="password"
-        />
-      </div>
-      <div class="btn-container">
-        <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
-        <div class="error">{{errorMsg}}</div>
-      </div>
-    </form>
+
+  <div class="detail_card">
+    <div class="margin10">
+      <form [formGroup]="loginForm" (ngSubmit)="Submit()">
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter email"
+            formControlName="user"
+            ngModel
+          />
+          <span style="color: red" *ngIf="user && user.invalid && user.touched"
+            >This email address is invalid</span
+          >
+        </div>
+        <div class="mb-3">
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              formControlName="password"
+              ngModel
+            />
+            <span
+              style="color: red"
+              *ngIf="password && password.invalid && password.touched"
+              >Password must have at least 5 characters</span
+            >
+          </div>
+        </div>
+
+        <div class="error" style="color: red; margin: 10px">{{ errorMsg }}</div>
+        <button
+          type="submit"
+          [disabled]="loginForm.invalid"
+          class="btn btn-primary"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
   </div>
-</div>
+
+
+<!-- 
+<form [formGroup]="loginForm" (ngSubmit)="Submit()">
+  <div class="form-group mb-3">
+    <label  class="form-label">Email address</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter email"
+      formControlName="user"
+      ngModel
+    />
+    <span style="color: red" *ngIf="user && user.invalid && user.touched">This email address is invalid</span>
+  </div>
+  <div class="form-group">
+    <label >Password</label>
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      formControlName="password"
+      ngModel
+    />
+    <span style="color: red" *ngIf="password && password.invalid && password.touched">This email address is invalid</span>
+
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Submit</button>
+  <div class="error">{{errorMsg}}</div>
+
+</form> -->

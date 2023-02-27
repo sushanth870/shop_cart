@@ -1,4 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="marginLR40">
+  <div class="cat_margin">
+    <div>
+      <h4 class="cat_heading">Men's Clothing</h4>
+    </div>
+
+    <div class="cat_products_section">
+      <div *ngFor="let data of listProducts">
+        <div class="marginLR20" *ngIf="data.category=='men\'s clothing'">
+          <app-card  [details]="data"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cat_margin">
+    <div>
+      <h4 class="cat_heading">Electronics</h4>
+    </div>
+
+    <div class="cat_products_section">
+      <div *ngFor="let data of listProducts">
+        <div class="marginLR20" *ngIf="data.category=='electronics'">
+            <app-card [details]="data"></app-card>
+          </div>      </div>
+    </div>
+  </div>
+</div>
 <div>
-<app-mens></app-mens>
-<app-electronics></app-electronics>
+  <app-footer></app-footer>
 </div>
