@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {Routes,RouterModule} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+// import { MatRadioButton } from '@angular/material';
+// import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,11 +23,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { FooterComponent } from './footer/footer.component';
+import { WomenComponent } from './women/women.component';
+import { FilterCategoryPipe } from './pipes/filter-category.pipe';
+import { SortPipePipe } from './pipes/sort-pipe.pipe';
 const appRoute: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
   {path:'mens',component:MensComponent},
+  {path:'womens',component:WomenComponent},
   {path:'electronics',component:ElectronicsComponent},
   {path:'productDetails/:id',component:ProductDetailsComponent},
   {path:'cart',component:CartComponent},
@@ -46,7 +53,11 @@ const appRoute: Routes = [
     CartComponent,
     MyProfileComponent,
     MyOrdersComponent,
-    FooterComponent
+    FooterComponent,
+    WomenComponent,
+    FilterCategoryPipe,
+    SortPipePipe,
+    // MatRadioButton
   ],
   imports: [
     BrowserModule,
@@ -54,7 +65,9 @@ const appRoute: Routes = [
     RouterModule.forRoot(appRoute),
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSliderModule,
+    // MatSelectModule
   ],
   providers: [freeApiService],
   bootstrap: [AppComponent]

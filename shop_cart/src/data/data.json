@@ -1,0 +1,140 @@
+
+    [
+      {
+        "id": "1",
+        "title": "LV bag",
+        "price": 199,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/LV.jpg"
+      },
+      {
+        "id": "2",
+        "title": "GG bag",
+        "price": 150,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/GG.jpg"
+      },
+      {
+        "id": "16",
+        "title": "Green White",
+        "price": 70,
+        "category": "Outfit",
+        "image": "../assets/images/womens/outfits/GreenWhite.jpg"
+      },
+      {
+        "id": "3",
+        "title": "DKNY bag",
+        "price": 100,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/DKNY.jpg"
+      },
+      {
+        "id": "15",
+        "title": "Ethanic Kurta",
+        "price": 190,
+        "category": "Outfit",
+        "image": "../assets/images/womens/outfits/EthnicKurta.jpg"
+      },
+      {
+        "id": "4",
+        "title": "Love bag",
+        "price": 70,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/Love.jpg"
+      },
+      {
+        "id": "17",
+        "title": "Linen Kurta",
+        "price": 130,
+        "category": "Outfit",
+        "image": "../assets/images/womens/outfits/LinenKurta.jpg"
+      },
+      {
+        "id": "5",
+        "title": "Myntra bag",
+        "price": 80,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/Myntra.jpg"
+      },
+      {
+        "id": "18",
+        "title": "Silk Saree",
+        "price": 80,
+        "category": "Outfit",
+        "image": "../assets/images/womens/outfits/SilkSaree.jpg"
+      },
+      {
+        "id": "6",
+        "title": "Nyka bag",
+        "price": 50,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/Myntra.jpg"
+      },
+      {
+        "id": "7",
+        "title": "Vismin bag",
+        "price": 30,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/Vismin.jpg"
+      },
+      {
+        "id": "19",
+        "title": "Tunic Kurta",
+        "price": 20,
+        "category": "Outfit",
+        "image": "../assets/images/womens/outfits/TunicDesign.jpg"
+      },
+      {
+        "id": "8",
+        "title": "Love bag",
+        "price": 70,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/Love.jpg"
+      },
+      {
+        "id": "9",
+        "title": "GG bag",
+        "price": 150,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/GG.jpg"
+      },
+      {
+        "id": "10",
+        "title": "LV bag",
+        "price": 199,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/LV.jpg"
+      },
+      {
+        "id": "20",
+        "title": "Cotton Saree",
+        "price": 100,
+        "category": "Outfit",
+        "image": "../assets/images/womens/outfits/CottonSaree.jpg"
+      },
+      {
+        "id": "12",
+        "title": "Nyka bag",
+        "price": 50,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/Myntra.jpg"
+      },
+      {
+        "id": "13",
+        "title": "Vismin bag",
+        "price": 30,
+        "category": "Bag",
+        "image": "../assets/images/womens/Bages/Vismin.jpg"
+      },
+      {
+        "id": "14",
+        "title": "Cotton Kurta",
+        "price": 150,
+        "category": "Outfit",
+        "image": "../assets/images/womens/outfits/CottonKurta.jpg"
+      }
+    
+      
+     
+    ]
+    

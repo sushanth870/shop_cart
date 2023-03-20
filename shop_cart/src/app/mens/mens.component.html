@@ -7,8 +7,11 @@
     <!-- <div class="products_section"> -->
     <div class="container">
       <div class="row">
-        <div class="col-6 col-sm-6 col-md-2 card_margin" *ngFor="let data of listMenProducts">
-            <app-card  [details]="data"></app-card>
+        <div
+          class="col-6 col-sm-6 col-md-4 col-lg-3 card_margin"
+          *ngFor="let data of listMenProducts"
+        >
+          <app-card [details]="data"></app-card>
         </div>
       </div>
       <!-- </div> -->

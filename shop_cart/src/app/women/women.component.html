@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+<div class="marginLR40">
+  <div class="mens_margin">
+    <div>
+      <h4 class="heading">Women</h4>
+    </div>
+    <!-- <div class="products_section"> -->
+    <div  style="display: flex;">
+      <div style="width:20%;margin: 20px;">
+        <h6> Select Category:</h6>
+        <div style="margin: 20px;margin-top: 30px;">
+          <input  id="Bag" style="margin:7px;cursor: pointer;" type="radio" name="Category" value="Bag" [(ngModel)]="WomenCategory" />
+          <label for="Bag" style="cursor: pointer;">Bags</label>
+          <input id="Outfits" style="margin:7px;cursor: pointer;" type="radio" name="Category" value="Outfit" [(ngModel)]="WomenCategory" />
+          <label for="Outfits" style="cursor: pointer;">Outfits</label>
+          <input id="All" style="margin:7px;cursor: pointer;" type="radio" name="Category" value="All" [(ngModel)]="WomenCategory" />
+          <label for="All" style="cursor: pointer;">All</label>
+        </div>
+        <h6> Price Range:</h6>
+        <div class="custom-slider" style="margin: 20px;margin-top: 30px;">
+          <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" ></ngx-slider>
+        </div>
+      </div>
+      <div style="width:80%" class="container">
+        <!-- <div  *ngIf="WomenCategory=='All';then block1;else block2" style="border-color: brown;"></div> -->
+        <!-- <ng-template #block1  > -->
+        <!-- <div  *ngIf="WomenCategory=='All'" class="row">
+            <div *ngFor="let data of listWomenProducts">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 card_margin" *ngIf="data.price>=minValue && data.price<=maxValue">
+                  <app-card  [details]="data"></app-card>
+                </div>
+            </div>
+          </div> -->
+        <!-- </ng-template> -->
+        <!-- <ng-template #block2  > -->
+        <!-- <div  *ngIf="WomenCategory!='All'" class="row">
+              <div *ngFor="let data of listWomenProducts|data.category==WomenCategory" class="col-6 col-sm-6 col-md-4 col-lg-3 card_margin">
+                <div   *ngIf="data.category==WomenCategory && (data.price>=minValue && data.price<=maxValue)">
+                  <app-card  [details]="data"></app-card>
+                </div>
+              </div>
+            </div> -->
+        <!-- </ng-template>  -->
+        <!-- </div> -->
+            <div class="sortby">
+              <div class="dropdownSize">
+               <select class="form-select form-select-sm " aria-label=".form-select-sm " [(ngModel)]="sortBy">
+                 <option selected value=0>Sort By</option>
+                 <option *ngFor="let type of sortypes" value={{type.id}} >{{type.type}}</option>
+               </select> 
+             </div>
+            </div>
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 card_margin" *ngFor="
+            let data of listWomenProducts
+             | filterCategory: WomenCategory:minValue:maxValue | sortPipe:sortBy
+          ">
+            <app-card [details]="data"></app-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

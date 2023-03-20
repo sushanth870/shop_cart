@@ -1,0 +1,67 @@
+.marginLR40 {
+    margin-left: 40px;
+    margin-right: 40px;
+    .mens_margin {
+        margin: 10px;
+        .sortby{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            .dropdownSize{
+                width: 20%S;
+            }
+        }
+        .card_margin {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .heading {
+            border-left: 10px solid #fdc827;
+            padding-left: 10px;
+        }
+        .products_section {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
+::ng-deep {
+    .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+        background: orange;
+    }
+    .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+        opacity: 0 !important; /*click effect color change*/
+        background-color: #422873 !important;  }
+        
+        .mat-radio-button.mat-accent .mat-radio-inner-circle {
+        background-color: #422873 !important; /*inner circle color change*/  }
+        
+        .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+        border-color: #422873 !important; /*outer ring color change*/  }
+}
+::ng-deep {
+    .custom-slider .ngx-slider .ngx-slider-bar {
+        background: #fff9d1;
+        height: 2px;
+      }
+      .custom-slider .ngx-slider .ngx-slider-selection {
+        background: #fdc827;
+      }
+
+      .custom-slider .ngx-slider .ngx-slider-pointer {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        top: -7px;
+        background-color: #fdc827;
+        z-index: 3;
+        border-radius: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heading {
+        font-size: 10px;
+    }
+}
