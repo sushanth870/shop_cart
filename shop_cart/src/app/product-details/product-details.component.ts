@@ -19,7 +19,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
 
     this.productId = this.activatedRoute.snapshot.paramMap.get('id');
-    this._freeApiService.getProductDetails(this.productId).subscribe((productdetails) => {
+    this._freeApiService.getProductDetails(this.productId).subscribe((productdetails: any) => {
       this.productDetails = productdetails;
     });
   }

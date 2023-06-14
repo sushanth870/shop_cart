@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
   constructor(private router: Router,private _cartService: CartService) { }
 
   ngOnInit(): void {
-this._cartService.getProducts().subscribe(res=>{
+this._cartService.getProducts().subscribe((res: any)=>{
   this.products = res;
   this.grandTotal= this._cartService.getTotalPrice();
 // if(window.screen.width>480){

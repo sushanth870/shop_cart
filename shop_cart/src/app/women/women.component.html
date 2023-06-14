@@ -22,26 +22,6 @@
         </div>
       </div>
       <div style="width:80%" class="container">
-        <!-- <div  *ngIf="WomenCategory=='All';then block1;else block2" style="border-color: brown;"></div> -->
-        <!-- <ng-template #block1  > -->
-        <!-- <div  *ngIf="WomenCategory=='All'" class="row">
-            <div *ngFor="let data of listWomenProducts">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3 card_margin" *ngIf="data.price>=minValue && data.price<=maxValue">
-                  <app-card  [details]="data"></app-card>
-                </div>
-            </div>
-          </div> -->
-        <!-- </ng-template> -->
-        <!-- <ng-template #block2  > -->
-        <!-- <div  *ngIf="WomenCategory!='All'" class="row">
-              <div *ngFor="let data of listWomenProducts|data.category==WomenCategory" class="col-6 col-sm-6 col-md-4 col-lg-3 card_margin">
-                <div   *ngIf="data.category==WomenCategory && (data.price>=minValue && data.price<=maxValue)">
-                  <app-card  [details]="data"></app-card>
-                </div>
-              </div>
-            </div> -->
-        <!-- </ng-template>  -->
-        <!-- </div> -->
             <div class="sortby">
               <div class="dropdownSize">
                <select class="form-select form-select-sm " aria-label=".form-select-sm " [(ngModel)]="sortBy">

@@ -18,7 +18,7 @@ export class AppComponent {
   ngOnInit() {
     // this.loginCheck = this.activatedRoute.snapshot.url;
     // console.log(this.loginCheck);
-    this._freeApiService.getproducts().subscribe((allProducts) => {
+    this._freeApiService.getproducts().subscribe((allProducts: completeProducts[]) => {
       this.listAllProducts = allProducts;
     });
   }

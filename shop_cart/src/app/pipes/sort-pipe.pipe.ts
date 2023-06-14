@@ -9,11 +9,11 @@ export class SortPipePipe implements PipeTransform {
     if (value.length === 0 || sortValue === 0) {
       return value;
     }
-    console.log(typeof (1));
-    console.log(typeof (sortValue));
+    // console.log(typeof (1));
+    // console.log(typeof (sortValue));
     if (sortValue == 1) {
       value.sort((a: any, b: any) => {
-        console.log(a.price);
+        // console.log(a.price);
         if (a.price < b.price) {
           return -1;
         }

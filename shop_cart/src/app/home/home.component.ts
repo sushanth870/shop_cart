@@ -13,8 +13,13 @@ export class HomeComponent implements OnInit {
   constructor(private _freeApiService: freeApiService) {}
 
   ngOnInit() {
-    this._freeApiService.getproducts().subscribe((products) => {
+    this._freeApiService.getproducts().subscribe((products: Products[]) => {
       this.listProducts = products;
     });
   }
+
+ 
+
+ 
+
 }

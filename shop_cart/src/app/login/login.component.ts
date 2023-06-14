@@ -54,8 +54,8 @@ export class LoginComponent implements OnInit {
 
 
   Submit() {
-    console.log(this.loginForm.value.user);
-    console.log(this.errorMsg);
+    // console.log(this.loginForm.value.user);
+    // console.log(this.errorMsg);
 
     let usernames = this.loginForm.value.user;
     let pass = this.loginForm.value.password;
@@ -65,8 +65,6 @@ export class LoginComponent implements OnInit {
     }
     if (res === 403) {
       this.errorMsg = 'Invalid Credentials';
-      console.log('inside login 403');
-
       this.router.navigate(['login']);
     }
   }

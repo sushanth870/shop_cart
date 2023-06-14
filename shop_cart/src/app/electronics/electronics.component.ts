@@ -12,7 +12,7 @@ export class ElectronicsComponent implements OnInit {
   constructor(private _freeApiService: freeApiService) {}
 
   ngOnInit() {
-    this._freeApiService.getAllElectronicsProducts().subscribe((products) => {
+    this._freeApiService.getAllElectronicsProducts().subscribe((products: Products[]) => {
       this.listElectronicsProducts = products;
     });
   }
